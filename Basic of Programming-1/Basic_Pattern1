@@ -307,3 +307,35 @@ int main() {
     cout << endl;
   }
 }
+
+// Q.14 Fancy Pattern #2
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n;
+  cin >> n;
+
+  // First part print
+  for(int row = 0; row<n; row++){
+    for(int col = 0; col<row+1; col++){
+      cout<<row+1;
+      // if Last Character not print Star
+      if(col != row){
+        cout<<"*";
+      }
+    }
+    cout<<endl;
+  }
+  //Second Part Print
+  for(int row = 0; row<n; row++){
+    for(int col = 0; col<n-row; col++){
+      cout<<row+1;
+      // if Last Character not print Star
+      if(col != n-row-1){
+        cout<<"*";
+      }
+    }
+    cout<<endl;
+  }
+}
