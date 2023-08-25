@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+  int a = 4;
+  // Rule:- Left shift karne par two se multiply ho jata hai
+  // it is working in bit level
+  // Left shift
+  cout<< "left shift " << (a<<2)<<endl;
+
+// Right shift karne par divide ho jata hai bits
+  //Right shift
+  cout<<"Right shift " <<(a>>1)<<endl;
+  
+}
