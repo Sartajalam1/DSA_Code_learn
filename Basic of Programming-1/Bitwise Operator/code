@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+  // bitwise operator 
+  // XOR Operate "^"
+ //  bool a = true;
+ //  bool b = false;
+
+ // cout<<(a^b)<<endl; 
+  
+
+  // // NOT Operator "~"
+  // bool a = false;
+  // bool b = true;
+
+  // cout<<(~a)<<endl;
+
+  //OR operator "|"
+  // bool a = true;
+  // bool b = false;
+
+  // cout<<(a|b)<<endl;
+  
+  
+  //AND operator "&"
+  // condition:- both are true 
+  // bool a = true;
+  // bool b = true;
+
+  // cout<< (a&b) <<endl;
+  
+}
