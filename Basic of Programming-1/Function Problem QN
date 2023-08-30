@@ -1,0 +1,17 @@
+// Two Value by function
+// #include<iostream>
+// using namespace std;
+// int add(int p, int r){
+//   int sum;
+//   sum = p+r;
+//   return sum;
+  
+// }
+// int main(){
+//   int p,r;
+//   cout<<"Enter the number"<<endl;
+//   cin>>p>>r;
+
+//   int num = add(p,r);
+//   cout<<num<<endl;
+// }
