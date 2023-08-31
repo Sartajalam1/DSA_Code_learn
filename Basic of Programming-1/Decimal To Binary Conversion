@@ -1,0 +1,40 @@
+// Decimal To Binary Conversion
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+// int decimalToBinaryMethod1(int n){
+//   // Division Method
+//   int Binaryno = 0;
+//   int i = 0;
+//   while(n>0){
+//     int bit = n % 2;
+//     //Actual Formula ,Logic;
+//     Binaryno = bit*pow(10,i++)+Binaryno;
+//     n =n/2;
+//   }
+//   return Binaryno;
+// }
+int decimalToBinaryMethod2(int n){
+  // Bitwise Method
+  int Binaryno = 0;
+  int i = 0;
+  while(n>0){
+    int bit = (n & 1);
+    //Actual Formula ,Logic; Reverse Metthood
+
+    Binaryno = bit*pow(10,i++)+Binaryno;
+    n =n >> 1;
+  }
+  return Binaryno;
+}
+
+int main(){
+  int n;
+ cout<<"Enter the number"<<endl;
+  cin>>n;
+  // int Binary = decimalToBinaryMethod1(n);
+  // Bitwise Method
+  int Binary = decimalToBinaryMethod2(n);
+  cout<<Binary;
+}
