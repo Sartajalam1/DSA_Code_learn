@@ -19,3 +19,24 @@ int main(){
     cout<<endl;
   }
 }
+// Q.2 Numeric Hollow inverted Half Pyaramid
+#include<iostream>
+using namespace std;
+
+int main(){
+  int n;
+  cin>>n;
+  for(int row = 0; row<n; row++){
+    for(int col = row+1; col<=n; col++){
+     // start and last col & row Print logic
+      if(col == row+1 || col==n || row == 0){
+        cout<<col;
+      }
+        // inner Space print
+      else{
+        cout<<" ";
+      }
+    }
+    cout<<endl;
+  }
+}
