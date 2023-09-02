@@ -1,0 +1,12 @@
+//Printing the Simple Array
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//   int arr[5] = {2,3,4,5,7};
+//   int brr[10] = {0,9,8,7,6,5,4};
+
+//   cout<<brr<<endl;
+//   for(int i = 0; i<5; i++){
+//     cout<<" Array printing  number"<<arr[i]<<endl;;
+//   }
