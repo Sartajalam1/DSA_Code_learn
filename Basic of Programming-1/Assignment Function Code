@@ -38,3 +38,52 @@ int main(){
 //   float area = Circle_Area(radius);
 //   cout<<"Area of circle "<<area<<endl;
 // }
+// Find the prime r not prime
+#include<iostream>
+using namespace std;
+
+bool checkPrime(int a){
+  for(int i = 2; i<a; i++){
+    if(a%i == 0){
+      return false;
+      
+    }
+  }
+   return true;
+}
+  int main(){
+    int n;
+    cin>>n;
+    bool ans = checkPrime(n);
+
+    if(ans){
+      cout<<"Prime \n";
+    }
+    else{
+      cout<<"Not a Prime \n";
+    }
+  }
+//Print All prime From 1 to N
+#include<iostream>
+using namespace std;
+
+bool checkPrime(int a){
+  for(int i = 2; i<a; i++){
+    if(a%i == 0){
+      return false;
+      
+    }
+  }
+   return true;
+}
+  int main(){
+    int n;
+    cin>>n;
+
+    for(int i = 2; i<=n; i++){
+      bool ans = checkPrime(i);
+      if(ans){
+        cout<<i<<" ";
+      }
+    }
+}
