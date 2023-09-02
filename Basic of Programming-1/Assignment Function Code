@@ -1,0 +1,40 @@
+// Given Number is odd And Even
+#include<iostream>
+using namespace std;
+
+bool oddEven(int num){
+  if(/*num%2==0*/ (num&1)==0){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+int main(){
+  int n;
+  cin>>n;
+  bool find= oddEven(n);
+  // cout<<"find the odd even "<<find<<endl;
+  if(find){
+    cout<<n<< " is Even Number./n";
+  }
+  else{
+    cout<<n<< " is Odd Number./n";
+  }
+}
+// Find Of Area Of Circle
+// #include<iostream>
+// using namespace std;
+
+
+// int Circle_Area(float radius){
+//   float area = 3.14*radius*radius;
+//   return area;
+// }
+// int main(){
+//   float radius;
+//   cin>>radius;
+//   float area = Circle_Area(radius);
+//   cout<<"Area of circle "<<area<<endl;
+// }
