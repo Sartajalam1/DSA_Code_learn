@@ -1,0 +1,27 @@
+// Maximum Minimum number in Array
+#include<iostream>
+#include<limits.h>
+using namespace std;
+
+int main(){
+  int arr[] = {5,6,2,9,10,3,1,7,4,8};
+  int size = 10;
+  int maxi = INT_MIN;
+  int mini = INT_MAX;
+// Travers The Number
+  for(int i = 0; i<size; i++){
+    //Condition Minimum Number Apply
+    if(arr[i] < mini){
+      mini = arr[i];
+    }
+    // Condition Maximum Number Apply
+    else if(arr[i] >maxi){
+     maxi = arr[i];
+  }
+  }
+  //Print the Minimum Number
+  cout<<"Minimum Number " <<mini<<endl;
+  // Print the maximum number
+  cout<<"Maximum number " <<maxi<<endl;
+  
+}
