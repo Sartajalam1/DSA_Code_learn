@@ -1,0 +1,26 @@
+// Intersection Of 2 Array
+//Dono  array me Jo comman element hoga usko onther array me push kar denge 
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main(){
+  vector<int>arr {1,2,3,4};
+  vector<int>brr{1,9,8,4};
+// It is push in ans common element
+  vector<int>crr;
+  // outer loop
+  for(int i = 0; i<arr.size(); i++){
+    // Inner loop
+    for(int j = 0; j<arr.size(); j++){
+      if(arr[i] == brr[j]){
+        crr.push_back(arr[i]);
+        brr[j] = -1;
+      }
+    }
+  }
+  // Auto , value belong to ans
+  for(auto value: crr){
+    cout<<value<<" "; 
+  }
+}
