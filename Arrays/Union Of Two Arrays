@@ -1,0 +1,32 @@
+// Union of two Arrays
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main(){
+  //initiaize Array
+  int arr[] = {1,2,3,4,5};
+  //Put the Size in Array
+  int size1 = 5;
+  //initiaize Array
+  int brr[] = {6,7,8,9,0};
+  //Put the Size in Array
+  int size2 = 5;
+
+  // Ans Store in Arrays
+  vector<int>ans;
+//Fisrt array in push_back in ans Array
+  for(int i = 0; i<size1; i++){
+    ans.push_back(arr[i]);
+  }
+  //Second array in push_back in ans Array
+  for(int i = 0; i<size2; i++){
+    ans.push_back(brr[i]);
+  }
+  //Print The Ans Array
+  for(int j = 0; j<ans.size(); j++){
+    cout<<ans[j]<<" ";
+  }
+  
+  
+}
