@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+  // // 2D declare Array
+  // int arr[3][3];
+
+  // //initialisation
+  // int brr[3][3] ={
+  // {1,2,3}, 
+  // {4,5,6},
+  // {7,8,9}};
+  // Indexes Print 2D Array
+  // cout<<brr[2][2]<<endl;
+}
