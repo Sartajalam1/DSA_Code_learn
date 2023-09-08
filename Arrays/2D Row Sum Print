@@ -1,0 +1,35 @@
+//Row Sum Print
+#include<iostream>
+using namespace std;
+void printRowSum(int arr[][3], int col, int row){
+  cout<<"Print the row wise and col wise"<<endl;
+  // Print the row wise sum
+  for(int i = 0; i<row; i++){
+    int sum = 0; 
+    for(int j = 0; j<col; j++){
+      sum = sum + arr[i][j];
+    }
+    cout<<sum<<endl;
+  }
+   
+}
+
+int main(){
+  int row =3,col = 3;
+  int arr[3][3];
+  cout<<"Taking Input number "<<endl;
+  
+  for(int i = 0; i<row; i++){
+    for(int j = 0; j<col; j++){
+      cin>>arr[i][j];
+    }
+  }
+
+  for(int i = 0; i<row;i++){
+    for(int j = 0; j<col;j++){
+      cout<<arr[i][j]<<" ";
+    }
+    cout<<endl;
+  }
+      printRowSum(arr, col, row);
+}
