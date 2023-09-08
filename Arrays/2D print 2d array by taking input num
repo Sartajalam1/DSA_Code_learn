@@ -19,7 +19,7 @@ int row;
   }
   cout<<"Print the Input Number"<<endl;
   for(int i = 0; i<arr.size(); i++){
-    //Yah par arr.size me i ya j ko input me dalna hoga,tab jaker differnt row ya col number input karoge tab right output dega
+    //Yah par arr.size me [i] ya [j] ko input me dalna hoga,tab jaker differnt row ya col number input karoge tab right output dega
     for(int j = 0; j<arr[i].size(); j++){
       // print output number
       cout<<arr[i][j]<<" ";
