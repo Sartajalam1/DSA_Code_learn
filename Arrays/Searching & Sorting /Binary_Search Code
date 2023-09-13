@@ -1,0 +1,51 @@
+//  Binary Search
+#include <iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+int BinarySearch(int arr[], int size, int target) {
+  int start = 0;
+  int end = size - 1;
+  int mid = start+(end-start)/2;
+  while(start<=end){
+    int element = arr[mid];
+    if(element == target){
+      return mid;
+    }
+    else if(target<element){
+      // Search in Left
+      end = mid-1;
+    }
+    else{
+      //Search in Right
+      start = mid+1;
+    }
+    mid = start + (end - start)/2;
+  }
+  //Element Not Found
+  return -1;
+}
+int main() {
+  // int arr[] = {2, 4, 5, 8, 10, 12, 16};
+  // int size = 7;
+  // int target = 12;
+
+  // int IndexofTarget = BinarySearch(arr, size, target);
+
+  // if (IndexofTarget == -1) {
+  //   cout << "Target Not Found " << endl;
+  // } else {
+  //   cout << "Target found of " << IndexofTarget << endl;
+  // }
+
+ /*vector<int>v{1,2,3,4,5,6};
+ //in built of   Binary search  Alorithm, 4 Target value hai
+  if(binary_search(v.begin() , v.end() , 4)){
+    cout<<"Found"<<endl;
+  }
+  else{
+    cout<<"Not Found " <<endl;
+  }*/
+  
+}
