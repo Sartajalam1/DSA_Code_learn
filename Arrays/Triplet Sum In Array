@@ -1,0 +1,23 @@
+//Triplet Sum In Array
+//isme check karna hai ki kiska pair milke sum banta hai
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main(){
+  vector<int>arr{10,20,30,40};
+  int sum = 40;
+
+  for(int i =0; i<arr.size(); i++){
+    int element1 = arr[i];
+    for(int j = 0; j<arr.size(); j++){
+      int element2 = arr[j];
+      for(int q = j+1; q<arr.size(); q++){
+        int element3 = arr[q];
+      if(arr[i]+arr[j]+arr[q] == sum){
+        cout<<"("<<arr[i]<<","<<arr[j]<<","<<arr[q]<<")"<<endl;
+      }
+    }
+  }
+}
+}
