@@ -1,0 +1,46 @@
+// Binary Search in a nearly sorted Array;
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int binarySearch(vector<int>arr,int target){
+  int s = 0;
+  int e = arr.size()-1;
+  int mid = s+(e-s)/2;
+
+  while(s<=e){
+    // Nearly Search Array in One Element
+    // Mid index in Element
+    if(arr[mid] == target){
+      return mid;
+    }
+    // Left Index in Element
+    // mid-1 >= s, is codition se just back wala element Check nahi hoga
+    if(mid-1 >= s && arr[mid-1] == target){
+      return mid - 1;
+    }
+    // Right Index In Element
+    //mid+1 < arr.size() ye condition Ager Array ke size se kam Ho then check 
+    if(mid+1 < arr.size() && arr[mid+1] == target){
+      return mid+1;
+    }
+    if(target > arr[mid]){
+      // Right Search in Array
+      s = mid+2;
+    }
+    else{
+      // Left Search in Array
+      e = mid-2;
+    }
+    mid = s+(e-s)/2;
+  }
+  return -1;
+}
+
+int main(){
+  vector<int>arr = {10,3,40,20,50,80,70};
+ int  target = 50;
+
+  int ans = binarySearch(arr,target);
+  cout<<"Target value: " <<ans<<endl;
+}
