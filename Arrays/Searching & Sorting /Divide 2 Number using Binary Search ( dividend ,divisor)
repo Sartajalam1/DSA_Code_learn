@@ -11,7 +11,8 @@ int solve(int dividend, int divisor){
 
   while(s<=e){
     if(abs(mid*divisor) == abs(dividend)){
-      return mid;
+     ans=mid // got the answer
+      break;
     }
     if(abs(mid*divisor) > abs(dividend)){
       e = mid-1; //serach in Left side <--
