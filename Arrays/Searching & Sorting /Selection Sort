@@ -1,0 +1,26 @@
+//Selection Sort in Array
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+  vector<int> arr = {5, 4, 3, 2, 1};
+  int n = arr.size();
+
+  // outer loop (n-1) round
+  for (int i = 0; i < n; i++) {
+    // initialize the empty variable
+    int indexmid = i;
+    for (int j = i + 1; j < n; j++) {
+      if (arr[j] < arr[indexmid]) {
+        // new minimum, then store
+        indexmid = j;
+      }
+    }
+    swap(arr[i], arr[indexmid]);
+  }
+  for (int i = 0; i < n; i++) {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+}
