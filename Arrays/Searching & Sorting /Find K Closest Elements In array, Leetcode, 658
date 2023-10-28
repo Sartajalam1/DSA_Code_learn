@@ -1,4 +1,25 @@
-//Find K Closest Elements In array, Leetcode, 658
+// Find K Closest Elements In array, Leetcode, 658
+// Two pointer Approach Method
+class Solution {
+public:
+    vector<int> findClosestElements(vector<int>& arr, int k, int x) {
+        int l = 0;
+        int h = arr.size()-1;
+
+        while(h-l>=k){
+            if(x-arr[l]>arr[h]-x){
+                l++;
+            }
+            else{
+                h--;
+            }
+        }
+        return vector<int>(arr.begin()+l,arr.begin()+h+1);
+        
+    }
+};
+
+// Binary Search + Two Pointer Method 2nd method
 class Solution {
 public:
     int lowerBound(vector<int>&arr ,int x) {
