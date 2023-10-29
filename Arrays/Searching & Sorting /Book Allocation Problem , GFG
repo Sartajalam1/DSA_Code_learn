@@ -1,0 +1,51 @@
+class Solution 
+{
+    public:
+    // yah function me check kar rahe ki Possible Solution.
+    bool isPossibleSolution(int arr[],int N, int M, int mid){
+        int pageSum = 0;
+        int count = 1;
+        // check kar rahe ki isme mid se bada koi value nahi hai, if hai to false return kar do
+        for(int i = 0; i<N; i++){
+            if(arr[i]>mid){
+                return false;
+            }
+            // agar pageSum aur array milke bade ho gaye hai to value ko ++ kar do, dusare student ko allocate kar do
+            if(pageSum + arr[i] > mid){
+                count++;
+                pageSum = arr[i];
+                // if count student of number se bada ho jaye to false return kar do
+                if(count > M){
+                    return false;
+                }
+            }
+            else{
+                pageSum += arr[i];
+            }
+        }
+        return true;
+    }
+    //Function to find minimum number of pages.
+    int findPages(int A[], int N, int M) 
+    {
+         if(M>N){return -1;}
+         int start  = 0;
+         int end = 0;
+         for(int i = 0; i<N;i++){
+             end += A[i];
+         };
+         int ans =  -1;
+        while(start<=end){
+            int mid = (start+end)/2;
+            if(isPossibleSolution(A,N,M,mid)){
+                ans = mid;
+                end = mid - 1;
+            }
+            else{
+                start = mid + 1;
+            }
+        }
+        return ans;
+        //code here
+    }
+};
