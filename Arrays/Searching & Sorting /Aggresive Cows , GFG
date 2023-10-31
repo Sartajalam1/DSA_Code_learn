@@ -1,0 +1,45 @@
+class Solution {
+public:
+
+bool isPossibleSolution(vector<int>&stalls, int k, int mid){
+    // can we place  k cows, with at least  mid distance between cows.
+    
+    int cowsCount = 1; //cows ko count kar rahe hai yaha par
+    int StallsPosition = stalls[0];
+    
+    for(int i = 0; i<stalls.size(); i++){
+        if(stalls[i] - StallsPosition >= mid){
+            cowsCount++;
+            StallsPosition = stalls[i]; // one more cow has been placed.
+        }
+        if(cowsCount == k){ // here is checking cows number
+            return true;
+        }
+       
+    }
+     return false;
+}
+
+    int solve(int n, int k, vector<int> &stalls) {
+        
+        sort(stalls.begin(),stalls.end());
+        int start = 0;
+        int end = stalls[stalls.size() - 1]-stalls[0];
+        int ans = -1;
+        
+        while(start<=end){
+            int mid = (start+end)/2;
+            if(isPossibleSolution(stalls,k,mid)){
+                ans = mid;
+                start = mid+1; // yaha par mera ans start me mil raha hai.
+            }
+            else{
+                end = mid-1;
+            }
+            
+        }
+        return ans;
+    
+        // Write your code here
+    }
+};
