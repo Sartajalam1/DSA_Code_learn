@@ -1,0 +1,64 @@
+// Roti-Prata spo , solution
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+bool isPossibleSolution(vector<int>cooksRanks,int nPrata,int mid){
+  int CurrPrata = 0; // current prata 0 se initialize kiya hu.
+  for(int i = 0; i<cooksRanks.size();i++){
+    int R = cooksRanks[i];
+    int j = 1;
+    int timeTaken = 0; // kitna time le raha ek cooks
+    while(true){
+      if(timeTaken + j * R <= mid){
+        ++CurrPrata;
+        timeTaken +=j*R;
+        ++j;
+      }
+      else{
+        break;
+      }
+    }
+    if(CurrPrata >= nPrata){
+      return true;
+    }
+  }
+  return false;
+}
+
+int minTimeToCompleteOrder(vector<int>cooksRanks, int nPrata){
+  int start = 0;
+  int highestRank = *max_element(cooksRanks.begin(),cooksRanks.end());
+  int end = highestRank*(nPrata*(nPrata+1)/2);
+  int ans = -1;
+
+  while(start <= end){
+    int mid = (start+end)>>1;
+    if(isPossibleSolution(cooksRanks,nPrata,mid)){
+      ans = mid;  //store ans 
+       end = mid-1; //search left side
+    }
+    else{
+      start = mid+1;
+    }
+  }
+  return ans;
+}
+
+int main(){
+  int trees;
+  cin>>trees;
+  while(trees--){
+    int nPrata, nCooks;
+    cin>>nPrata>>nCooks;
+    vector<int>cooksRanks;
+    while(nCooks--){
+      int Rank;
+      cin>>Rank;
+      cooksRanks.push_back(Rank);
+    }
+    cout<<minTimeToCompleteOrder(cooksRanks,nPrata)<<endl;
+  }
+  return 0;
+}
