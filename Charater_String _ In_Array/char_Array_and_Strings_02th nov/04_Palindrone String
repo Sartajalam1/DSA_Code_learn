@@ -1,0 +1,26 @@
+// Q.4 Palindrone name
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+bool palindrone(char word[]){
+  int i = 0;
+  int n = strlen(word);
+  int j = n-1;
+   while(i<=j){
+     if(word[i] != word[j]){
+       return false;
+     }
+     else{
+       i++;
+       j--;
+     }
+   }
+  return true;
+}
+ int main(){
+   char word[100] = "NooN"; // it is palindrone word , return true;
+
+   // char word[100] = "sartaj"; // it is not Palindrone word return false;
+   cout<<"palindrone Number: " <<palindrone(word);
+ }
