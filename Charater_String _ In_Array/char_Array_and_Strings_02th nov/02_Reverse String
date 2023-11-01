@@ -1,0 +1,25 @@
+// Q.2 Reverse String in Array
+#include<iostream>
+ #include<cstring>
+ using namespace std;
+
+char reverseStr(char name[]){
+  int i = 0; // start index
+  int n = strlen(name); //index ke  lenght tak chalega
+  int j = n-1; // end index
+
+  while(i<=j){
+    swap(name[i],name[j]);
+      i++;
+      j--;
+    
+  }
+  return 0;
+}
+
+int main(){
+  char name[100] = "sartaj";
+  cin>>name;
+   reverseStr(name);
+  cout<<"Reversed String is : "<<reverseStr(name);
+}
