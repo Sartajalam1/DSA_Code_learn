@@ -1,0 +1,31 @@
+// Basics Concepts
+#include<iostream>
+using namespace std;
+
+int main(){
+  char name[100]; // Declare char array,
+  char word[100] = "sartaj"; // initialize the array,
+  cout<<"Enter the name:"<<endl;
+  cin>>name;
+  cout<<"My name is " <<name<<endl; // O\P print
+
+  name[0]= 'S'; // index wise char lena,
+  name[1] = 'A';
+  cin>>name[2];
+  cout<<name[0]<<name[1]<<name[2]<<endl;
+
+  //Print all char in array
+  cin>>name;
+  for(int i = 0; i<7; i++){ 
+    cout<<"Index " << i <<" value: "<<name[i]<<endl;
+  }
+  // check Null index par kya hai, 
+  int value = (int)name[6];
+  cout<<"is Value " <<value<<endl;
+
+  char ch[100];
+  // cin>>ch; // isme space print nahi karega
+  cin.getline(ch,50); // getline function se space tak print karega
+  cout<<"Full name:- " <<ch<<endl;
+  
+}
