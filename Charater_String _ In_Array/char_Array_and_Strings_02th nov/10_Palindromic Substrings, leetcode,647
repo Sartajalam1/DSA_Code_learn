@@ -1,0 +1,29 @@
+class Solution {
+public:
+int expandAroundIndex(string s, int left,int right){
+    int count = 0;
+    //jab tak match karegga , tab tak count increment kardo and i pich and j aaage kardo,
+    while(left >=0 && right<s.length()&& s[left]==s[right]){
+        count++;
+        left--;
+        right++;
+    }
+    return count;
+}
+    int countSubstrings(string s) {
+        int totalCount = 0;
+        int n = s.length();
+
+        for(int center = 0; center<n; center++){
+            //odd
+            int oddkaAns = expandAroundIndex(s,center,center);
+            totalCount = totalCount+oddkaAns;
+
+            //even
+            int evenkaAns = expandAroundIndex(s,center,center+1);
+            totalCount = totalCount+evenkaAns;
+        }
+        return totalCount;
+        
+    }
+};
