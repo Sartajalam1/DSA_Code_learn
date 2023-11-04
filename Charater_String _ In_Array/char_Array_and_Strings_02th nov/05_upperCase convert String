@@ -1,0 +1,17 @@
+// Q.5 convert lowerCase to UpperCase;
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+void convertIntoUpperCase(char arr[]){
+  int n = strlen(arr);
+  for(int i = 0; i<n; i++){
+    arr[i] = arr[i]-'a'+'A'; // convert  LowerCase to UppperCase,
+    // arr[i] = arr[i]-'A'+'a'; // convert UpperCase To LowerCase
+  }
+}
+ int main(){
+  char arr[100] = "sartaj";
+   convertIntoUpperCase(arr);
+   cout<<"LowerCase To UpperCase " <<arr<<endl;
+ }
