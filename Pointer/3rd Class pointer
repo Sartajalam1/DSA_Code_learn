@@ -1,1 +1,55 @@
-jkldfh
+#include<iostream>
+using namespace std;
+
+// void until(int* p){
+//   // p = p+1;
+//   *p = *p+1; // updates value ,Bcoz reference pass
+// }
+
+// Here is a using Double pointer called
+// void solve(int** ptr){
+//   ptr = ptr+1;
+//   // *ptr = *ptr+1;
+//   // **ptr = **ptr+1;
+// }
+
+int main(){
+ // // Que No.3
+  // int x = 12;
+  // int* p = &x;
+  // int** q = &p;
+
+  // solve(q); // Function Create
+  // cout<<x<<endl;
+  
+  // Que No.2
+  // int a = 5;
+  // int* ptr = &a;
+
+  // cout<<"Before"<<endl;
+  // cout<<a<<endl;
+  // cout<<&a<<endl;
+  // cout<<*ptr<<endl;
+
+  // until(ptr); // Fucnction Create
+
+  // cout<<"After"<<endl;
+  // cout<<a<<endl;
+  // cout<<&a<<endl;
+  // cout<<*ptr<<endl;
+  
+  //Que No.1
+  // int a = 5;
+  // int* ptr = &a;
+  // int** q = &ptr;
+
+  // cout<<a<<endl;
+  // cout<<&a<<endl;
+  // cout<<ptr<<endl;
+  // cout<<&ptr<<endl;
+  // cout<<*ptr<<endl;
+  // cout<<q<<endl;
+  // cout<<&q<<endl;
+  // cout<<*q<<endl;
+  // cout<<**q<<endl;
+}
