@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+//Here is pass-by-value , only create a copy;
+// void solve(int value){
+//   value++;
+// }
+
+//Here is a pass Reference, the Actual value in change
+void solve(int& value){
+  value++; 
+}
+
+int main(){
+
+  int b = 6;
+
+  // Refernce with Function
+  solve(b);
+  cout<<b<<endl;
+
+  
+  // int a = 5;
+  // // creating Reference variable
+  // int& b = a;
+
+  // cout<<a<<endl;
+  // cout<<b<<endl;
